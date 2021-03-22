@@ -17,27 +17,45 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
+
+val fontFamily = FontFamily(
+    Font(R.font.quicksandlight, FontWeight.Light),
+    Font(R.font.quicksandmedium, FontWeight.Medium),
+    Font(R.font.quicksandregular, FontWeight.Normal),
+    Font(R.font.quicksandsemibold, FontWeight.SemiBold),
+    Font(R.font.quicksandbold, FontWeight.Bold)
+)
 
 // Set of Material typography styles to start with
 val typography = Typography(
+    h1 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W600,
+        fontSize = 96.sp
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W600,
+        fontSize = 18.sp
+    ),
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W400,
         fontSize = 16.sp
-    )
-        /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
+    ),
+    body2 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W400,
         fontSize = 14.sp
     ),
     caption = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = fontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontSize = 14.sp,
     )
-    */
 )
